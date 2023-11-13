@@ -32,17 +32,9 @@ export default function Root() {
   return (
     <>
       <div id="header">
-        <h1 className="font-title-2">Cool Conference Session Finder</h1>
-        <p className="font-subtitle-2 user-info">
-          { userInfo ?
-            <span>Welcome {userInfo.userDetails}! [<a href="/logout">Logout</a>] </span>
-            :
-            <a href="/login">Login with Microsoft Entra ID</a>
-          }
-        </p>
+        <h1 className="font-title-2">OpenAI Powered PASS Summit Session Recommender</h1>
         <p className="font-subtitle-2">
-          Use OpenAI to search for interesting sessions. Write the topic you're interested in, and (up to) the top ten most interesting and related session will be returned.         
-          The search is done using <a href="https://learn.microsoft.com/en-us/azure/ai-services/openai/concepts/models#embeddings-models">text embeddings</a> and then using <a href="https://en.wikipedia.org/wiki/Cosine_similarity" target="_blank">cosine similarity</a> to find the most similar sessions.
+        We have used integration of Azure SQL Database with OpenAI to build a session recommender for PASS Summit sessions. We have loaded all the sessions into a SQL database, and have used OpenAI to create <a href="https://learn.microsoft.com/en-us/azure/ai-services/openai/concepts/models#embeddings-models"> embeddings</a>, and then using <a href="https://en.wikipedia.org/wiki/Cosine_similarity" target="_blank">cosine similarity</a> to find the most similar sessions.
         </p>
         <p className="font-subtitle-2">
           Source code and and related articles is <a href="https://github.com/Azure-Samples/azure-sql-db-session-recommender">available on GitHub.</a>
